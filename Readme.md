@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Нина Бершадская](https://up.htmlacademy.ru/htmlcss/28/user/1260839).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Панасюк](https://htmlacademy.ru/profile/sasha_oldsport).
 
 ---
 
