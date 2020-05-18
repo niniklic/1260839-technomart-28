@@ -70,7 +70,9 @@
 		  <section>
   			<h2>Фильтр:</h2>
   			<div>
-  				<h3>Цена:</h3>  				
+  				<h3>Цена:</h3>
+  				<input type="range" min="0" max="30000" value="25000">  
+  				<p><span>0</span> - <span>30000</span></p>
   			</div>  			
 
   			<div>
@@ -92,9 +94,15 @@
   		</section>
 
   		<!-- Список карточек товаров -->
-  		<section>
-  			<h2>Список товаров</h2>
-  			<div>Сортировка</div>
+  		<section>  			
+  			<div>
+  				<h2>Сортировка:</h2>
+  				<a href="">По цене</a>
+  				<a href="">По типу</a>
+  				<a href="">По функционалу</a>
+  				<a href="">По возрастанию</a>
+  				<a href="">По убыванию</a>
+  			</div>
 
   			<ul>
 		      <li>
@@ -169,8 +177,12 @@
 		      </li>
 		    </ul>
 
-		    <!-- тут будет paginator -->
-		    <div></div>		    	
+		    <div class="pagination">				  
+				  <a href="#">1</a>
+				  <a href="#">2</a>
+				  <a href="#">3</a>
+				  <a href="#">Следующая</a>				  
+				</div>		    	
   		</section>
   		
   		<section>
