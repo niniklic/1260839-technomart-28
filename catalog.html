@@ -12,9 +12,9 @@
   		<a href="index.html">
 	      <img src="img/logo-technomart.svg" width="220" height="47" alt="Логотип «Техномарт»">
 	    </a>
-	    <form action="" method="POST">
-	    	<button type="submit"></button>
-	    	<label>Поиск: <input type="text"></label>
+	    <form action="https://echo.htmlacademy.ru" method="get">
+	    	<button type="submit" aria-label="search"></button>
+	    	<label>Поиск: <input type="text" name="search-text"></label>
 	    </form>
 	    <a href="">Закладки: <span>0</span></a>
 	    <a href="">Корзина: <span>10</span></a>
@@ -36,7 +36,7 @@
 			  </ul>
 			</div>
 
-  		<nav area-label="Главное меню">
+  		<nav>
   			<ul>
 		      <li><a href="index.html">Главная</a></li>
 		      <li><a href="">Компания</a></li>
@@ -75,35 +75,35 @@
   			<form action="https://echo.htmlacademy.ru" method="get">
 	  			<fieldset>
 	  				<legend>Цена:</legend>
-	  				<input type="range" min="0" max="30000" value="25000" name="price-range" id="filter-price-range">  
-	  				<p><input type="text" value="0" name="minprice"> - <input type="text" value="30000" name="maxprice"></p>
+	  				<input type="range" min="0" max="30000" name="price-range" value="25000">  
+	  				<p><input type="text" name="minprice" value="0"> - <input type="text" name="maxprice" value="30000"></p>
 	  			</fieldset>  			
 
 	  			<fieldset>
 	  				<legend>Производители:</legend>
 	  				<ul>
 		  				<li>
-		  					<label><input type="checkbox" name="bosh" value="bosh"> Bosh</label>
+		  					<label><input type="checkbox" name="manufacturer1" value="bosh"> Bosh</label>
 		  				</li>
 		  				<li>
-		  					<label><input type="checkbox" name="interscol" value="interscol"> Интерскол</label>
+		  					<label><input type="checkbox" name="manufacturer2" value="interscol"> Интерскол</label>
 		  				</li>
 		  				<li>
-		  					<label><input type="checkbox" name="makita" value="makita"> Makita</label>
+		  					<label><input type="checkbox" name="manufacturer3" value="makita"> Makita</label>
 		  				</li>
 		  				<li>
-		  					<label><input type="checkbox" name="dewalt" value="dewalt"> Dewalt</label>
+		  					<label><input type="checkbox" name="manufacturer4" value="dewalt"> Dewalt</label>
 		  				</li>
 		  				<li>
-		  					<label><input type="checkbox" name="hitachi" value="hitachi"> Hitachi</label>
+		  					<label><input type="checkbox" name="manufacturer5" value="hitachi"> Hitachi</label>
 		  				</li>
 		  			</ul>
 	  			</fieldset>  			
 
 	  			<fieldset>
 	  				<legend>Питание:</legend>
-	  				<label><input type="radio" name="manufacturer" value="accumulator" checked> Аккумуляторные</label>
-	  				<label><input type="radio" name="manufacturer" value="outlet"> Сетевые</label>
+	  				<label><input type="radio" name="supply" value="accumulator" checked> Аккумуляторные</label>
+	  				<label><input type="radio" name="supply" value="outlet"> Сетевые</label>
 	  			</fieldset>
   			
   			<button type="submit">Показать</button>
@@ -114,11 +114,11 @@
   			<div>
   				<h2>Сортировка:</h2>
   				<ol>
-  					<li><a href="">По цене</a></li>
-  					<li><a href="">По типу</a></li>
-  					<li><a href="">По функционалу</a></li>
-  					<li><a href="" area-label="По возрастанию">По возрастанию</a></li>
-  					<li><a href="" area-label="По убыванию">По убыванию</a></li>
+  					<li><button type="button" value="sort-price">По цене</button></li>
+  					<li><button type="button" value="sort-type">По типу</button></li>
+  					<li><button type="button" value="sort-functionality">По функционалу</button></li>
+  					<li><button type="button" value="sort-ascending" aria-label="По возрастанию"></button></li>
+  					<li><button type="button" value="sort-descending" aria-label="По убыванию"></button></li>
   				</ol>
   			</div>
 
@@ -197,10 +197,10 @@
 
 		    <div class="pagination">				  
 		    	<ol>
-					  <li><a href="" area-label="Страница 1">1</a></li>
-					  <li><a href="" area-label="Страница 2">2</a></li>
-					  <li><a href="" area-label="Страница 3">3</a></li>
-					  <li><a href="" area-label="Следующая">Следующая</a></li>		
+					  <li><a href="" aria-label="Страница 1">1</a></li>
+					  <li><a href="" aria-label="Страница 2">2</a></li>
+					  <li><a href="" aria-label="Страница 3">3</a></li>
+					  <li><a href="">Следующая</a></li>		
 					</ol>		  
 				</div>		    	
   		</section>
@@ -222,7 +222,7 @@
 	    <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
 	    <p>+7 (812) 555-05-55</p> 
 	    
-	    <div area-label="Навигация по сайту">
+	    <div>
 	    	<ul>
 			    <li><a href="">Компания</a></li>
 			    <li><a href="">Новости</a></li>
@@ -244,13 +244,19 @@
 			<div>
 				<ul>
 		      <li>
-		        <a href="" area-label="Мы Вконтакте">Вконтакте</a>
+		        <a href="" aria-label="Мы Вконтакте">
+		        	<img src="img/icon-vk.svg" width="26" height="15" alt="Вконтакте">
+		        </a>
 		      </li>
 		      <li>
-		        <a href="" area-label="Мф на Фэйсбук">Фэйсбук</a>
+		        <a href="" aria-label="Мы в Фейсбуке">
+		        	<img src="img/icon-fb.svg" width="12" height="22" alt="Фейсбук">
+		        </a>
 		      </li>
 		      <li>
-		        <a href="" area-label="Мы в Инстаграм">Инстаграм</a>
+		        <a href="" aria-label="Мы в Инстаграм">
+		        	<img src="img/icon-insta.svg" width="21" height="21" alt="Инстаграм">
+		        </a>
 		      </li>
 		    </ul>
 			</div>
@@ -266,7 +272,7 @@
 		  <h2>Товар добавлен в корзину</h2>
 		  <button type="button">Оформить заказ</button>
 		  <button type="button">Продолжить покупки</button>
-		  <button type="button" area-label="Закрыть окно">Закрыть</button>
+		  <button type="button">Закрыть</button>
 		</section>
 
   </body>
