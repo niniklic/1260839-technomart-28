@@ -9,13 +9,11 @@
 
 <!-- Шапка сайта -->
   	<header>
-  		<a href="">
-	      <img src="img/logo-technomart.svg" width="220" height="47" alt="Логотип «Техномарт»">
-	    </a>
-	    <form action="" method="POST"><label>Поиск: <input type="text"></label></form>
+  		<img src="img/logo-technomart.svg" width="220" height="47" alt="Логотип «Техномарт»">
+	    <form action="" method="POST"><button type="submit"></button><label>Поиск: <input type="text" name="search"></label></form>
 	    <a href="">Закладки: <span>0</span></a>
 	    <a href="">Корзина: <span>0</span></a>
-      <a href="">Оформить заказ:</a>
+      <a href="">Оформить заказ</a>
 
       <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
       <div>
@@ -25,7 +23,7 @@
 	    <button>Войти</button>
 	    <button>Регистрация</button>
 
-  		<nav>
+  		<nav area-label="Главное меню">
   			<ul>
 		      <li><a href="">Главная</a></li>
 		      <li><a href="">Компания</a></li>
@@ -40,9 +38,9 @@
 
 <!-- Основное содержание -->
   	<main>
-  		<h1>Интернет-магазин «Техномарт»</h1>
+  		<h1 class="visually-hidden">Интернет-магазин «Техномарт»</h1>
   		<section>
-  			<h2>Разделы каталога</h2>
+  			<h2 class="visually-hidden">Разделы каталога</h2>
   			<ul>
   				<li>
   					<h3>Материалы</h3>
@@ -65,15 +63,16 @@
   					<a href="">Бесплатно</a>
   				</li>
   				<!-- Будущий слайдер -->
-  				<li>  					
-  					<div class="slider"> <!-- Контейнер для всего слайдера -->
+  				<li>  				
+  					<!-- Контейнер для всего слайдера -->	
+  					<div class="slider"> 
 							
-							<input type="radio" name="slides" id="check1" checked>
-							<input type="radio" name="slides" id="check2">
+							<input type="radio" name="slides" id="check1" name="slide-first" checked>
+							<input type="radio" name="slides" id="check2" name="slide-second">
 
 							<div>
-								<label for="check1">&lt;</label>
-								<label for="check2">&gt;</label>
+								<label for="check1" area-label="Предыдущий слайд">&lt;</label>
+								<label for="check2" area-label="Следующий слайд">&gt;</label>
 							</div>
 
 							<!-- Блоки для слайдов-->
@@ -206,7 +205,7 @@
   			<h2>Контакты</h2>
   			<p>Вы можете забрать товар сами, заехав в наш в офис:</p>
   			<a href="https://goo.gl/maps/mZTg5RZy6zvdBX5m6">
-  				<img src="img/map.png" width="300" height="158" alt="Карта Санкт-Петербург, Б. Конюшеннаяю 19/8">
+  				<img src="img/map.png" width="300" height="158" alt="Офис на карте">
   			</a>
   			<a href="">Заблудились? Напишите нам!</a>
   		</section>
@@ -221,7 +220,7 @@
 	    <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
 	    <p>+7 (812) 555-05-55</p>
 
-			<div>
+			<div area-label="Навигация по сайту">
 		    <ul>
 				  <li><a href="">Компания</a></li>
 				  <li><a href="">Новости</a></li>
@@ -243,13 +242,13 @@
 			<div>
 				<ul>
 		      <li>
-		        <a href="">Вконтакте</a>
+		        <a href="" area-label="Вконтакте">Вконтакте</a>
 		      </li>
 		      <li>
-		        <a href="">Фейсбук</a>
+		        <a href="" area-label="Фейсбук">Фейсбук</a>
 		      </li>
 		      <li>
-		        <a href="">Инстаграм</a>
+		        <a href="" area-label="Инстаграм">Инстаграм</a>
 		      </li>
 		    </ul>
 			</div>
