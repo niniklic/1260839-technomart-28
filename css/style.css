@@ -1,0 +1,464 @@
+/* Variables */
+:root {
+	/*fonts*/
+	--font-primary: Cuprum, "Arial Narrow", sans-serif;
+	--font-secondary: "PT Sans", Calibri, sans-serif;
+
+	/*colors*/
+  --basic-black: #000000;  
+  --basic-extra-dark: #293449;
+  --basic-dark: #32425C;
+  --basic-light: #F2F6F8;
+  --basic-extra-light: #F7F3EC;
+  --basic-white: #ffffff;
+
+	--top-background: rgba(0, 0, 0, 0.0001);
+
+	--font-color-light: #A9A9A9;
+  --font-color-special: #FFD180;
+  
+  --order: #63A63E;
+  --order-shadow: #367315;
+  --link-button: #EE3643;
+  --product-shadow: rgba(0, 0, 0, 0.15);
+  --services-shadow: #405069;
+  --social-background: #212A3A;
+  --pagination-border: #E5E5E5;
+
+  --materials-background: #FFBF47;
+  --tools-background: #3BBCE3;
+  --equipment-background: #DC91D8;
+  --sales-background: #8ED78F;
+  --delivery-background: #FFC047;
+  --slider-background: rgba(0, 0, 0, 0.25);
+}
+
+/* Global styles*/
+body {
+	min-width: 940px;
+	margin: 0;
+	padding: 10px;
+	font-family: var(--font-primary);
+	font-size: 18px;
+	line-height: 24px;	
+	color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+a {
+  text-decoration: none;  
+  color: var(--basic-white);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.link-button {
+	font-family: var(--font-primary);
+	font-size: 14px;
+	line-height: 18px;	
+	text-transform: uppercase;
+	color: var(--basic-white);
+	background-color: var(--link-button);
+	border: none;
+}
+
+.title {	
+	font-family: var(--font-primary);
+	font-size: 30px;
+	line-height: 30px;
+	font-weight: 400;
+	text-transform: uppercase;	
+}
+
+
+/* header styles */
+.main-header {
+	color: var(--basic-dark);
+	background-color: var(--top-background);
+	background-image: url(../img/top-background.png);
+	background-repeat: repeat;
+	background-position: top center;
+}
+
+.header-items {
+	background-color: var(--basic-extra-dark);
+}
+
+.search-label {
+	color: var(--basic-white);
+}
+
+.full {
+	background-color: var(--link-button);
+}
+
+.empty {
+	background-color: var(--basic-extra-dark);
+}
+
+.header-order {
+	background-color: var(--order);
+}
+
+.header-description {
+	font-size: 16px;
+	line-height: 23px;
+	font-style: italic;
+	color: var(--link-button);
+}
+
+.header-contacts {
+	font-size: 14px;
+	line-height: 24px;
+}
+
+.header-contacts a {
+	font-size: 21px;
+	line-height: 30px;
+	font-weight: 700;
+	color: var(--link-button);
+}
+
+.header-account,
+.account-button {
+	font-size: 21px;
+	line-height: 21px;
+	color: var(--basic-black);	
+}
+
+.account-button {
+	background-color: var(--basic-white);
+}
+
+.account-button.button {
+	border: none;
+}
+
+.header-account a {	
+	font-size: 16px;
+	line-height: 18px;
+	color: var(--basic-dark);
+}
+
+.header-navigation {
+	background-color: var(--basic-dark);
+	box-shadow: inset 0px -5px 0px var(--basic-extra-dark);
+}
+
+
+/* footer-styles */ 
+.main-footer {
+	color: var(--basic-white);
+	background-color: var(--basic-dark);	
+}
+
+.footer-bottom {	
+	background-color: var(--basic-extra-dark);
+}
+
+.footer-categories a,
+.footer-email,
+.footer-developer {
+	color: var(--font-color-special);
+}
+
+.social-item {
+	background-color: var(--social-background);
+}
+
+
+/* main */
+.categories-list,
+.slides,
+.manufacturers-list,
+.services-list,
+.filter-manufacturers,
+.filter-supply,
+.sort-list {
+	list-style-type: none;
+}
+
+.category-item-title {
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: 700;
+	color: var(--basic-white);
+}
+
+.materials {
+	background-color: var(--materials-background);
+}
+
+.tools {
+	background-color: var(--tools-background);
+}
+
+.equipment {
+	background-color: var(--equipment-background);
+}
+
+.sales {
+	background-color: var(--sales-background);
+}
+
+.delivery {
+	background-color: var(--delivery-background);
+}
+
+.category-button {
+	text-transform: uppercase;
+}
+
+.slide-item {
+	color: var(--basic-white);
+	background-color: var(--slider-background);
+}
+
+.slide-title {
+	font-size: 36px;
+	line-height: 36px;
+	font-weight: 400;	
+}
+
+.popular {
+	background-color: var(--basic-extra-light);
+}
+
+.services {
+	background-color: var(--basic-light);
+}
+
+.services-item {	
+	font-size: 21px;
+	line-height: 30px;
+	font-weight: 700;
+	color: var(--basic-white);
+	background-color: var(--basic-dark);
+	box-shadow: 0px 1px 0px var(--basic-extra-dark), inset 0px 1px 0px var(--services-shadow);
+}
+
+.services-item-active {
+	color: var(--basic-dark);
+	background-color: var(--basic-white);
+	box-shadow: 0px 1px 0px var(--basic-white);
+}
+
+.services p,
+.company p,
+.contacts p {
+	font-family: var(--font-secondary);
+	font-size: 13px;
+	line-height: 24px;
+}
+
+.service-title {
+	color: var(--basic-dark);
+}
+
+.company-partners-list {
+	list-style-image: url("../img/red-line.svg");
+}
+
+
+.catalog-content,
+.catalog-content button {
+	font-family: var(--font-secondary);
+	text-transform: uppercase;
+}
+
+.breadcrumbs {
+	font-size: 13px;
+	line-height: 18px;
+}
+
+.breadcrumbs a {	
+	color: var(--basic-black);
+}
+
+.about-title,
+.catalog-title {
+	background-color: var(--basic-light);
+}
+
+/* catalog filter and sorting */
+.sort-title,
+.filter-title,
+.filters button {
+	font-size: 13px;
+	line-height: 18px;
+}
+
+.filters legend {
+	font-size: 17px;	
+	line-height: 30px;
+	font-weight: 700;
+}
+
+.filter-title,
+.filters input[type="text"],
+.sorting, 
+.sorting button {
+	background-color: var(--basic-extra-light);
+}
+
+.price {
+	font-size: 17px;
+	line-height: 18px;
+	text-align: center;
+}
+
+.filter-option {
+	font-size: 15px;
+	line-height: 19px;
+}
+
+.sorting button {
+	font-family: var(--font-secondary);
+	font-size: 13px;
+	line-height: 18px;
+	color: var(--basic-black);
+	border: none;
+	border-bottom-color: var(--link-button);
+	border-bottom-style: dotted;
+	border-bottom-width: 1px;
+	box-shadow: none;
+	opacity: 0.3;
+}
+
+.sorting button.active {
+	color: var(--link-button);
+	text-decoration: none;
+	border: none;
+	opacity: 1;
+}
+
+/* product list */
+.product-list {
+	list-style-type: none;
+}
+
+.product-item {
+	width: 220px;
+	height: 318px;
+}
+
+.product-item-title {		
+	font-size: 18px;
+	line-height: 20px;
+	font-weight: 700;
+	text-transform: none;	
+}
+
+.product-item-oldprice {
+	font-size: 17px;	
+	line-height: 18px;
+	font-weight: 700;
+	text-decoration: line-through;
+	color: var(--font-color-light);	
+}
+
+.product-item-price {
+	font-size: 17px;	
+	line-height: 18px;
+	font-weight: 700;
+	color: var(--basic-white);
+	background-image: url("../img/red-button.svg");
+	background-repeat: no-repeat;	
+}
+
+.product-item:hover {
+	box-shadow: 0px 4px 20px var(--product-shadow);
+}
+
+.product-item .button {
+	font-family: var(--font-primary);
+	font-size: 14px;
+	line-height: 18px;
+	text-transform: uppercase;
+}
+
+.button-buy {		
+	color: var(--basic-white);
+	background-color: var(--order);
+	border: none;
+	box-shadow: inset 0px -3px 0px var(--order-shadow);
+	border-radius: 2px;	
+}
+
+.to-bookmarks-button {
+	color: var(--basic-dark);
+	background-color: var(--basic-white);
+	border-width: 3px;
+	border-color: var(--order);
+	border-radius: 2px;
+}
+
+/* catalog pagination */
+.pagination-list {
+	list-style-type: none;
+}
+
+.pagination-item {		
+	font-size: 13px;
+	line-height: 18px;
+	background-color: var(--basic-white);
+}
+
+.pagination-item a {
+	color: var(--basic-black);
+}
+
+.pagination-item-current {
+	color: var(--basic-white);
+	background-color: var(--link-button);
+}
+
+/* catalog about */
+.about-category {
+	font-family: var(--font-primary);
+	font-size: 14px;
+	line-height: 18px;	
+	background-color: var(--basic-light);
+}
+
+.about-category p {
+	font-size: 13px;
+	line-height: 24px;	
+	text-transform: none;
+}
+
+/* modal window added-to-cart*/
+.added-to-cart {
+	font-family: var(--font-primary);
+}
+
+.added-title {	
+	font-size: 24px;	
+	line-height: 30px;
+	font-weight: 700;
+}
+
+.added-to-cart button {
+	font-size: 14px;
+	line-height: 18px;
+	text-transform: uppercase; 
+}
+
+/* modal window feedback*/
+.feedback-send {
+	background-color: var(--basic-light);
+}
