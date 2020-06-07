@@ -12,8 +12,6 @@
   --basic-extra-light: #F7F3EC;
   --basic-white: #ffffff;
 
-	--top-background: rgba(0, 0, 0, 0.0001);
-
 	--font-color-light: #A9A9A9;
   --font-color-special: #FFD180;
   
@@ -236,7 +234,7 @@ img {
 }
 
 .header-account a:active,
-.account-button:active {
+.account-button.button:active {
 	color: var(--account-click-fontcolor);
 }
 
