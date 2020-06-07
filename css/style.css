@@ -114,7 +114,6 @@ img {
 .main-header {
 	color: var(--basic-dark);
 	background-color: var(--top-background);
-	background-image: url(../img/top-background.png);
 	background-repeat: repeat;
 	background-position: top center;
 }
@@ -139,29 +138,29 @@ img {
 	box-shadow: none;
 }
 
+.search-text:focus{
+	background-color: var(--basic-white);
+}
+
 .search-text::-webkit-input-placeholder {color: var(--basic-white);}
 .search-text::-moz-placeholder          {color: var(--basic-white);}
 .search-text:-moz-placeholder           {color: var(--basic-white);}
 .search-text:-ms-input-placeholder      {color: var(--basic-white);}
 
 .search-text:focus::-webkit-input-placeholder {
-	color: transparent;
-	background-color: var(--basic-white);
+	color: transparent;	
 }
 
 .search-text:focus::-moz-placeholder {
-	color: transparent;
-	background-color: var(--basic-white);
+	color: transparent;	
 }
 
 .search-text:focus:-moz-placeholder {
-	color: transparent;
-	background-color: var(--basic-white);
+	color: transparent;	
 }
 
 .search-text:focus:-ms-input-placeholder {
-	color: transparent;
-	background-color: var(--basic-white);
+	color: transparent;	
 }
 
 .full {
@@ -176,9 +175,19 @@ img {
 	background-color: var(--order);
 }
 
-.header-link a:active {
+.header-bookmarks:active,
+.header-cart:active {
 	color: var(--item-click-fontcolor);
 	background-color: var(--item-click-background);
+}
+
+.header-order:hover {
+	background-color: var(--order-color-hover);
+}
+
+.header-order:active {
+	color: var(--item-click-fontcolor);
+	background-color: var(--order);	
 }
 
 .header-description {
@@ -355,12 +364,6 @@ img {
 .service-active {
 	display: block;
 }
-
-.company-partners-list {
-	list-style-image: url("../img/red-line.svg");
-}
-
-
 
 .catalog-content,
 .catalog-content button {
