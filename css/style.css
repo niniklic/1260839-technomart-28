@@ -75,9 +75,9 @@ img {
 }
 
 .container {
-	width: 940px;
-	padding: 0 10px;	
+	width: 940px;		
 	margin: 0 auto;
+	padding: 0 10px;
 }
 
 .visually-hidden {
@@ -126,6 +126,7 @@ img {
 .pagination-list,
 .company-partners-list,
 .product-list,
+.breadcrumbs,
 .footer-navigation,
 .footer-categories,
 .social-list {
@@ -380,29 +381,30 @@ img {
 .site-navigation {	
 	display: flex;
 	flex-direction: row;	
-	justify-content: flex-start;
-	align-items: stretch;
+	align-content: space-between;
 	padding: 0;
-	margin: 0;
-	width: 940px;
-}
-
-.navigation-item {
-	padding-left: 27px;	
-	padding-top: 16px;
-	padding-bottom: 20px;
-	padding-right: 24px;
+	margin: 0;	
+	width: 100%;
 	background-color: var(--basic-dark);
 	box-shadow: inset 0px -5px 0px var(--basic-extra-dark);
 }
 
-.navigation-item:first-child {
+.navigation-item a{
+	display: inline-block;
+	padding-left: 27px;	
+	padding-top: 16px;
+	padding-bottom: 20px;
+	padding-right: 27px;
+}
+
+.navigation-item:first-child a {
 	padding-left: 52px;
 }
 
-.navigation-item:last-child {
+.navigation-item:last-child a {
 	padding-right: 47px;
 }
+
 
 .navigation-item:hover,
 .navigation-item:active {
@@ -578,6 +580,7 @@ img {
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
+	box-sizing: border-box;
 	width: 220px;
 	height: 318px;
 	text-align: center;
@@ -688,8 +691,7 @@ img {
 
 .manufacturers-item {
 	width: 218px;
-	height: 145px;
-	border: 1px solid var(--product-border);
+	height: 145px;	
 }
 
 .manufacturers-item a {
@@ -698,6 +700,16 @@ img {
 	justify-content: center;
 	width: 100%;
 	height: 100%;	
+	border: 1px solid var(--product-border);
+}
+
+.manufacturers-item a:hover {
+	box-shadow: 0px 4px 20px var(--product-shadow);
+}
+
+.manufacturers-item a:active {
+	opacity: 0.5;
+	box-shadow: 0px 4px 20px var(--product-shadow);
 }
 
 /* services */
@@ -728,10 +740,7 @@ img {
 	right: 0px;
 	width: 10px;
 	height: 279px;
-	background-color: var(--manufacturer-click-background);		
-	mix-blend-mode: normal;
-  /* чтоб была видна */
-	border: 1px solid var(--category-dark);
+  background-image: url("../img/stick.png");
 }
 
 .services-item {	
@@ -860,7 +869,6 @@ img {
 	display: grid;
 	grid-template-columns: 240px 1fr;
 	align-content: start;
-	column-gap: 25px;		
 	font-family: var(--font-secondary);
 	text-transform: uppercase;
 }
@@ -901,7 +909,8 @@ img {
 }
 
 .filters {
-	width: 240px;
+	width: 220px;
+	margin-right: 25px;
 }
 
 .filters legend {
@@ -918,6 +927,8 @@ img {
 }
 
 .filter-form fieldset {
+	margin: 0;
+	padding: 0;
 	border: none;
 }
 
@@ -1041,12 +1052,17 @@ img {
 .footer-menu ul {
 	display: flex;
 	flex-direction: row;
-	justify-content: flex-end;
+	justify-content: space-between;
 }
 
 .footer-navigation {
+	width: 450px;
 	margin-top: 37px;
 	margin-bottom: 34px;
+}
+
+.footer-categories {
+	padding-left: 20px;
 }
 
 .footer-categories a,
@@ -1096,16 +1112,20 @@ img {
 }
 
 .social-item {
+	display:flex;
+  justify-content: center;
+  align-items: center;
 	width: 44px;
 	height: 44px;
-	text-align: center;	
 	background-color: var(--social-background);
+	border-radius: 50%;
 }
 
 .social-item:hover,
 .social-item:active {
 	background-color: var(--link-button);
 }
+
 
 .footer-mailto {
 	margin: 0;
@@ -1116,6 +1136,7 @@ img {
 .footer-developed {
 	margin: 0;
 	margin-left: 51px;
+	margin-right: 13px;
 	width: 98px;
 }
 
