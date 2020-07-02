@@ -17,8 +17,7 @@
   
   --order: #63A63E;
   --order-shadow: #367315;
-  --basic-red: #EE3643;
-  --product-shadow: rgba(0, 0, 0, 0.15);
+  --basic-red: #EE3643;  
   --services-shadow: #405069;
   --social-background: #212A3A;
   --pagination-border: #E5E5E5;
@@ -28,18 +27,22 @@
   --equipment-background: #DC91D8;
   --sales-background: #8ED78F;
   --delivery-background: #FFC047;
-  --slider-background: rgba(0, 0, 0, 0.25);
-  --logo-shadow: rgba(0, 0, 0, 0.24);
-  --manufacturer-click-background: rgba(0, 0, 0, 0.0001);
+  --scale-background: #d7dcde;
+  --scale-active: #00ca74;
+  --toggle-background: #ababab;
+  --toggle-shadow: rgba(171, 171, 171, 0.3);
+  --black-a25: rgba(0, 0, 0, 0.25);
+  --black-a24: rgba(0, 0, 0, 0.24);
+  --black-a15: rgba(0, 0, 0, 0.15);
+  --black-a0001: rgba(0, 0, 0, 0.0001);
 
   /* effects */
-  --logo-slider-click: #BA2732;
-  --logo-click-shadow: rgba(0, 0, 0, 0.24);  
+  --logo-slider-click: #BA2732; 
   --order-color-hover: #5FBB2D;
   --order-color-active: #518534;
   --item-click-background: #161D29;
-  --item-click-fontcolor: rgba(255, 255, 255, 0.5);
-  --category-white: rgba(255, 255, 255, 0.3);
+  --white-a5: rgba(255, 255, 255, 0.5);
+  --white-a3: rgba(255, 255, 255, 0.3);
   --category-light: rgba(197, 197, 197, 0.3);
   --category-dark: rgba(169, 169, 169, 0.3);
   --basic-greylight: #C5C5C5;
@@ -168,7 +171,7 @@ img {
 	padding-left: 55px;
 	padding-right: 57px;
 	background-color: var(--basic-red);
-	box-shadow: inset 0px -5px 0px var(--logo-shadow);
+	box-shadow: inset 0px -5px 0px var(--black-a24);
 }
 
 .logo-catalog:active {
@@ -261,7 +264,7 @@ img {
 
 .header-bookmarks:active,
 .header-cart:active {
-	color: var(--item-click-fontcolor);
+	color: var(--white-a5);
 	background-color: var(--item-click-background);
 }
 
@@ -270,7 +273,7 @@ img {
 }
 
 .header-order:active {
-	color: var(--item-click-fontcolor);
+	color: var(--white-a5);
 	background-color: var(--order);	
 }
 
@@ -310,7 +313,7 @@ img {
 	font-weight: 700;
 	color: var(--basic-red);
 	border: 3px solid var(--basic-white);
-	box-shadow: 0px 4px 4px var(--slider-background);
+	box-shadow: 0px 4px 4px var(--black-a25);
 }
 
 .header-contacts p {
@@ -484,7 +487,7 @@ img {
 	padding-bottom: 10px;
 	text-align: center;
 	text-transform: uppercase;
-	background-color: var(--category-white);	
+	background-color: var(--white-a3);	
 }
 
 .category-button:hover {
@@ -523,7 +526,7 @@ img {
 	width: 620px;
 	height: 266px;
 	color: var(--basic-white);
-	background-color: var(--slider-background);
+	background-color: var(--black-a25);
 }
 
 .slide-item.active {
@@ -636,7 +639,7 @@ img {
 }
 
 .product-item:hover {
-	box-shadow: 0px 4px 20px var(--product-shadow);
+	box-shadow: 0px 4px 20px var(--black-a15);
 }
 
 .product-item .button {
@@ -707,12 +710,12 @@ img {
 }
 
 .manufacturers-item a:hover {
-	box-shadow: 0px 4px 20px var(--product-shadow);
+	box-shadow: 0px 4px 20px var(--black-a15);
 }
 
 .manufacturers-item a:active {
 	opacity: 0.5;
-	box-shadow: 0px 4px 20px var(--product-shadow);
+	box-shadow: 0px 4px 20px var(--black-a15);
 }
 
 /* services */
@@ -966,22 +969,99 @@ img {
 	margin-top: 14px;
 }
 
-.filter-form fieldset {
+.filter-set {
 	position: relative;
 	margin: 0;
 	padding: 0;
 	border: none;
 }
 
-.filter-form .set-matufacturers {
-	margin-top: 16px;
+.filters legend {
+	font-size: 17px;	
+	line-height: 30px;
+	font-weight: 700;
 }
 
-.filter-form .set-supply {
-	margin-top: 18px; 
+.filter-price legend {
+	margin-bottom: 11px;
 }
 
-.filter-form fieldset::after {
+.range-filter {
+  width: 220px;
+}
+
+.range-controls {
+	position: relative;
+  height: 41px;
+  margin-bottom: 9px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: var(--basic-extra-light);
+  border-radius: 5px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: var(--scale-background);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+  background: var(--scale-active);
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid var(--basic-white);
+  background-color: var(--toggle-background);
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 var(--toggle-shadow);
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 18px;
+}
+
+.range-controls .toggle-max {
+  left: 160px;
+}
+
+.price-controls {
+	display: flex;
+	justify-content: space-between;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 25px;
+	font-size: 16px;
+	line-height: 18px;
+	vertical-align: middle;
+}
+
+.price-controls input {
+	width: 75px;
+  padding: 10px;  
+	font-size: 17px;
+	line-height: 18px;
+	text-align: center;
+  border: none;
+  border-radius: 5px;
+  background: var(--basic-extra-light);
+}
+
+.price-controls span {
+	padding-top: 10px;
+}
+
+
+.filter-set::after {
 	content: "";
 	display: block;
 	position: relative;
@@ -992,27 +1072,8 @@ img {
 	background-image: url("../img/linethrough.svg");
 }
 
-.filters .set-supply::after {
+.set-supply::after {
 	display: none;
-}
-
-.filters legend {
-	font-size: 17px;	
-	line-height: 30px;
-	font-weight: 700;
-	margin-bottom: 15px;
-}
-
-.filter-price p {
-	padding: 0;
-	margin: 0;
-	margin-bottom: 25px;
-}
-
-.filter-price .price {
-	font-size: 17px;
-	line-height: 18px;
-	text-align: center;
 }
 
 .filters ul {
@@ -1026,11 +1087,6 @@ img {
   padding-left: 35px;    
 }
 
-.filter-radio {
-	min-height: 25px;
-	vertical-align: middle;
-}
-
 .filter-option label {
   position: relative;
   display: block;  
@@ -1039,6 +1095,14 @@ img {
 	line-height: 19px;	
   cursor: pointer;
   user-select: none;  
+}
+
+.set-matufacturers {
+	margin-top: 16px;
+}
+
+.set-matufacturers legend {
+	margin-bottom: 15px;
 }
 
 .filter-input-checkbox + label::before {
@@ -1056,6 +1120,19 @@ img {
 .filter-input-checkbox:checked + label::before {
   width: 27px;
   background-image: url("../img/checkbox-on.svg");
+}
+
+.set-supply {
+	margin-top: 18px; 
+}
+
+.set-supply legend{
+	margin-bottom: 21px;
+}
+
+.filter-radio {
+	min-height: 25px;
+	vertical-align: middle;
 }
 
 .filter-input-radio + label::before {
@@ -1246,7 +1323,7 @@ img {
 	margin-bottom: 22px;
 	text-align: center;
 	background-color: var(--basic-red);
-	box-shadow: inset 0px -5px 0px var(--logo-shadow);
+	box-shadow: inset 0px -5px 0px var(--black-a24);
 }
 
 .logo-footer img {
