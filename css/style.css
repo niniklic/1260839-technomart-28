@@ -126,6 +126,7 @@ img {
 .filter-manufacturers,
 .filter-supply,
 .sort-list,
+.order-list,
 .pagination-list,
 .company-partners-list,
 .product-list,
@@ -1391,11 +1392,12 @@ img {
 .sorting {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: flex-start;
 	margin-bottom: 28px;
 }
 
 .sort-title {
+	width: 221px;
 	margin: 0;
 	padding: 0;
 	padding-top: 10px;
@@ -1403,20 +1405,13 @@ img {
 	padding-left: 19px; 
 }
 
-.sort-list {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	width: 460px;
-}
-
-.sort-list li {
+.sorting li {
 	padding-top: 9px;
 	padding-bottom: 9px;
 	line-height: 18px;
 }
 
-.sorting button[type="button"] {
+.sorting button {
 	margin: 0;
 	padding: 0;
 	font-family: var(--font-secondary);
@@ -1430,32 +1425,59 @@ img {
 	opacity: 0.3;
 }
 
-.sort-order {
-	width: 11px;
-	height: 10px;
-	background-image: url("../img/icon-up-dir.svg");
-	background-repeat: no-repeat;
+.sort-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 354px;
+	margin-right: 29px;
 }
 
-.sort-ascending {
-	background-image: url("../img/icon-down-dir.svg")
-}
-
-.sort-ascending.current {
-	background-image: url("../img/icon-down-dir.svg")
-	opacity: 1;
-}
-
-.sorting button.current {	
+.sort-type.current {	
 	text-decoration: none;
 	color: var(--basic-red);
 	opacity: 1;
 }
 
-.sorting button:hover,
-.sorting button:focus {
+.sort-type:hover,
+.sort-type:focus {
 	text-decoration-style: solid;
 	opacity: 1;
+}
+
+.order-list {
+	display: flex;
+	flex-wrap: wrap; 
+	margin: 0 17px;
+}
+
+.order-list li:last-child {
+	margin-left: 21px;
+}
+
+.sort-list button:hover {
+	cursor: pointer;
+}
+
+.sorting .sort-order {
+	opacity: 1;
+}
+
+.sort-order path {
+	fill: var(--basic-greylight);
+}
+
+.sort-ascending svg {
+	transform: rotate(180deg);
+}
+
+.sort-order:hover path,
+.sort-order:focus path {
+	fill: var(--basic-black);
+}
+
+.sort-order.current path {
+	fill: var(--basic-red);
 }
 
 /* catalog pagination */
