@@ -115,30 +115,31 @@
     				</li>
 
     				<!-- Slider -->
-    				<li class="category-item slider-item">  				  					
+    				<li class="category-item category-item-slider">			
     					<div class="slider"> 
-                <div class="slider-radio">
-                  <input type="radio" name="slides" id="check1" value="slide-one" checked>
-                  <input type="radio" name="slides" id="check2" value="slide-two">
-                </div>
-                <div class="slider-checker">  
-                  <label for="check1" aria-label="Предыдущий слайд"></label>
-                  <label for="check2" aria-label="Следующий слайд"></label>
-                </div>
 
-  							<!-- blocks for slides -->
-  							<ol class="slides">
-  							  <li class="slide-item active">
-  							  	<h4 class="slide-title">Перфораторы</h4>
-  							  	<p>Настоящие мужские игрушки</p>
-  							  	<a class="link-button slider-button" href="catalog.html">Открыть каталог</a>
-  							  </li>
-  							  <li class="slide-item">
-  							  	<h4 class="slide-title">Дрели</h4>
-  							  	<p>Соседям на радость!</p>
-  							  	<a class="link-button slider-button" href="catalog.html">Открыть каталог</a>
-  							  </li>							  
-  							</ol>
+                <ol class="slider-list">                  
+                  <li class="slider-item slide1 current">
+                    <h4 class="title slide-title">Перфораторы</h4>
+                    <p>Настоящие мужские игрушки</p>
+                    <a class="link-button slide-button popular-button" href="catalog.html">Открыть каталог</a>
+                  </li>
+                  <li class="slider-item slide2">
+                    <h4 class="title slide-title">Дрели</h4>
+                    <p>Соседям на радость!</p>
+                    <a class="link-button slide-button popular-button" href="catalog.html">Открыть каталог</a>
+                  </li>
+                                 
+                </ol>
+
+                <div class="slide-arrow arrow-previous"></div>
+                <div class="slide-arrow arrow-next"></div>
+
+                <div class="slider-controls">                  
+                  <button class="current" type="button" aria-label="Первый слайд"></button>
+                  <button type="button" aria-label="Второй слайд"></button>
+                </div>  	
+
     					</div>
     				</li>  				
     			</ul>

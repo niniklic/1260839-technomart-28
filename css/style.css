@@ -21,7 +21,7 @@
   --services-shadow: #405069;
   --social-background: #212A3A;
   --pagination-border: #E5E5E5;
-
+  --slider-hover: #CA2C37;
   --materials-background: #FFBF47;
   --tools-background: #3BBCE3;
   --equipment-background: #DC91D8;
@@ -120,7 +120,7 @@ img {
 
 .site-navigation,
 .categories-list,
-.slides,
+.slider-list,
 .manufacturers-list,
 .services-list,
 .filter-manufacturers,
@@ -458,6 +458,9 @@ img {
 
 .materials {
 	background-color: var(--materials-background);
+	background-image: url("../img/icon-1.svg");
+	background-repeat: no-repeat;
+	background-position: 31px 213px;
 }
 
 .tools {
@@ -503,45 +506,107 @@ img {
 	line-height: 18px;
 }
 
-.slider-item {
+.category-item-slider {
 	grid-column-start: 1;
 	grid-column-end: 3;
 	grid-row-start: 2;
 	grid-row-end: 4;
-	position: relative;
+	position: relative;	
 }
 
-.slider-radio {
-	position: absolute;
-	bottom: 36px;
-	left: 295px;
+.slider {
+  position: relative;
 }
 
-.slides {
-	padding: 0;
-}
-
-.slide-item {
-	display: none;
-	width: 620px;
-	height: 266px;
+.slider-item {
+	display: none;	
+	height: 243px;
+	padding-left: 24px;
+	padding-top: 23px;
 	color: var(--basic-white);
 	background-color: var(--black-a25);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center center;
 }
 
-.slide-item.active {
+.slider-item.current {
 	display: block;
 }
 
-.slide-title {
-	margin: 0;
-	font-size: 36px;
-	line-height: 36px;
-	font-weight: 400;	
+.slider-item p {
+	margin-top: 5px;
+	margin-bottom: 113px;
 }
 
-.slider-button:active {
+.slide-title {
+	font-size: 36px;
+	line-height: 36px;
+	font-weight: 700;
+}
+
+.slider-controls {
+	display: flex;  
+  justify-content: space-between;
+  position: absolute;
+  bottom: 36px;
+	left: 295px;
+	width: 30px;
+  z-index: 20;  
+}
+
+.slider-controls button {
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  background-color: var(--basic-red);
+  border: 2px solid var(--basic-white);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-controls .current {
+  background-color: var(--basic-white);
+}
+
+.slider-item.slide1 {
+	background: url(../img/perforator.jpg);
+}
+
+.slider-item.slide2 {
+	background: url(../img/drill.jpg);
+}
+
+.slide-button {
+	margin-right: 0;
+	margin-bottom: 27px;
+}
+
+.slide-button:hover {
+	background-color: var(--slider-hover);
+}
+
+.slide-button:active {
 	background-color: var(--logo-slider-click);
+}
+
+.slide-arrow {
+	position: absolute;
+	top: 122px;
+	width: 22px;
+	height: 40px;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.arrow-previous {	
+	left: 24px;
+	background-image: url("../img/icon-left.svg");	
+}
+
+.arrow-next {
+	left: 578px;
+	background-image: url("../img/icon-right.svg");
 }
 
 .popular-products,
@@ -565,7 +630,10 @@ img {
 	margin-left: 28px;
 }
 
+
+
 .popular-button {	
+	display: block;
 	width: 192px;		
 	margin-right: 14px;	
 }
