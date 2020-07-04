@@ -166,7 +166,7 @@ img {
 .logo-container {
 	position: absolute;
 	top: 0;
-	left: 10;
+	left: 10px;
 	z-index: 10;
 	width: 108px;
 	height: 18px;
@@ -319,16 +319,16 @@ img {
 .header-content {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;		
+	justify-content: flex-start;		
 }
 
 .header-description {
 	width: 197px;
 	min-height: 71px;
 	margin: 0;
-	margin-left: 20px;
-	margin-top: 37.5px;
-
+	margin-top: 38px;
+	margin-left: 30px;
+	margin-right: 93px;
 	font-size: 16px;
 	line-height: 23px;
 	font-style: italic;
@@ -336,7 +336,7 @@ img {
 }
 
 .header-contacts {	
-	margin-top: 41px;
+	margin-top: 41px;	
 	font-size: 14px;	
 	text-align: center;
 }
@@ -378,7 +378,7 @@ img {
 
 .header-account {
 	margin-top: 41px;
-	text-align: center;
+	margin-left: 69px;
 }
 
 .header-account,
@@ -386,6 +386,10 @@ img {
 	font-size: 21px;
 	line-height: 21px;
 	color: var(--basic-black);	
+}
+
+.header-account a {			
+	color: var(--basic-dark);
 }
 
 .account-button {
@@ -396,8 +400,22 @@ img {
 	background-color: var(--basic-white);
 }
 
+.account-button path {
+	fill: var(--basic-greylight);
+}
+
+.account-button:hover path,
+.account-button:focus path {
+	fill: var(--basic-grey);
+}
+
+.account-button:active path {
+	fill: var(--basic-greylight);
+}
+
 .account-button.button-login {
 	position: relative;
+	margin-right: 5px;
 	padding-left: 45px;
 	padding-right: 27px;
 }
@@ -411,37 +429,65 @@ img {
 	height: 17px;
 }
 
-.button-login path {
-	fill: var(--basic-greylight);
-}
-
-.button-login:hover path,
-.button-login:focus path {
-	fill: var(--basic-grey);
-}
-
 .account-button.button-register {
 	width: 150px;
 }
 
-.header-account a {			
-	color: var(--basic-dark);
+.user-account {
+	margin-left: 51px;
 }
 
-.account-name {		
-	padding: 12px 56px;		
+.account-name {	
+	display: inline-block;
+	vertical-align: bottom;
+	position: relative;
+	padding: 12px 56px;	
+	padding-right: 3px;	
 	font-size: 21px;
 	line-height: 21px;
+}
+
+.account-name svg {
+	position: absolute;
+	top: 13px;
+	left: 15px;
+}
+
+.button-logout {	
+	display: inline-block;
+	vertical-align: bottom;
+	width: 54px;
+	height: 17px;
+	margin-left: -5px;
+	padding: 14px 17px;
 }
 
 .account-menu {
 	padding: 0;
 	margin-top: 7px;
+	margin-bottom: 0;
+	text-align: center;
 }
 
 .account-menu li {
+	position: relative;
 	display: inline-block;
-	vertical-align: bottom;
+	vertical-align: baseline;
+}
+
+.account-menu li:last-child {
+	padding-left: 25px;
+}
+
+.account-menu li:last-child::after {
+	position: absolute;
+	content: "";
+	left: 9px;
+	top: 10px;
+	width: 4px;
+	height: 4px;
+	background-color: var(--basic-dark);
+	border-radius: 50%;
 }
 
 .account-menu a {
@@ -462,8 +508,12 @@ img {
 }
 
 .header-navigation {
-	margin-top: 45px;
+	margin-top: 40px;
 	margin-bottom: 60px;
+}
+
+.header-user-navigation {
+	margin-top: 42px;
 }
 
 .site-navigation {	
