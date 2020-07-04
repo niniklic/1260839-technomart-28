@@ -249,27 +249,36 @@
     			<h2 class="title services-title">Сервисы</h2>
     			<p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
           <div class="services-box">
-      			<ul class="services-list">
-      				<li class="services-item service-item-active">Доставка</li>
-      				<li class="services-item">Гарантия</li>
-      				<li class="services-item">Кредит</li>
-      			</ul>
-      			<div class="service-description service-active">
-      				<h4 class="title service-title">Доставка</h4>
-      				<p>Мы с удовольствием доставим ваш товар прямо</p>
-              <p>к вашему подъезду совершенно бесплатно!</p>
-              <p>Ведь мы неплохо заработаем,</p>
-              <p>поднимая его на ваш этаж!</p>
-      			</div>
-      			<div class="service-description">
-      				<h4 class="title service-title">Гарантия</h4>
-      				<p>Если купленный у нас товар сломается или заискрит, а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
-      			</div>
-      			<div class="service-description">
-      				<h4 class="title service-title">Кредит</h4>
-      				<p>Залезть в долговую яму стало ещё проще! Кредитные консультанты придут вам на помощь.</p>
-      				<a class="link-button" href="">Отправить заявку</a>
-      			</div>
+      			<ul class="services-list">      				
+              <li>               
+                <input class="visually-hidden service-input" type="radio" name="services" value="delivery" id="service-delivery" checked>
+                <div class="service-description service-delivery ">
+                  <h4 class="title service-title">Доставка</h4>
+                  <p>Мы с удовольствием доставим ваш товар прямо</p>
+                  <p>к вашему подъезду совершенно бесплатно!</p>
+                  <p>Ведь мы неплохо заработаем,</p>
+                  <p>поднимая его на ваш этаж!</p>
+                </div>
+                <label class="services-item" for="service-delivery">Доставка</label>
+              </li>
+      				<li>                
+                <input class="visually-hidden service-input" type="radio" name="services" value="guarantee" id="service-guarantee">
+                <div class="service-description service-guarantee">
+                  <h4 class="title service-title">Гарантия</h4>
+                  <p>Если купленный у нас товар сломается или заискрит, а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
+                </div>
+                <label class="services-item" for="service-guarantee">Гарантия</label>
+              </li>
+      				<li>                
+                <input class="visually-hidden service-input" type="radio" name="services" value="credit" id="service-credit" checked>
+                <div class="service-description service-credit  service-active">
+                  <h4 class="title service-title">Кредит</h4>
+                  <p>Залезть в долговую яму стало ещё проще! Кредитные консультанты придут вам на помощь.</p>
+                  <a class="link-button credit-button popular-button" href="">Отправить заявку</a>
+                </div>
+                <label class="services-item" for="service-credit">Кредит</label>
+              </li>
+      			</ul>      			
           </div>
         </div>
   		</section>
@@ -321,7 +330,7 @@
           <ul class="footer-navigation">
             <li><a href="">Компания</a></li>
             <li><a href="">Новости</a></li>
-            <li><a href="">Каталог</a></li>       
+            <li><a href="catalog.html">Каталог</a></li>       
             <li><a href="">Доставка</a></li>
             <li><a href="">Контакты</a></li>
           </ul>  

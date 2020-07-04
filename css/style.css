@@ -1068,6 +1068,7 @@ img {
 .services {	
 	margin-top: 70px;
 	padding-top: 64px;
+	padding-bottom: 99px;
 	background-color: var(--basic-light);
 }
 
@@ -1083,6 +1084,11 @@ img {
 .services-list {
 	position: relative;
 	margin-top: 70px;
+	cursor: pointer;
+}
+
+.services-list label {
+	cursor: pointer;
 }
 
 .services-list:after {
@@ -1096,6 +1102,7 @@ img {
 }
 
 .services-item {	
+	display: block;
 	box-sizing: border-box;
 	width: 240px;
 	height: 61px;
@@ -1107,38 +1114,41 @@ img {
 	color: var(--basic-white);
 	background-color: var(--basic-dark);
 	box-shadow: 0px 1px 0px var(--basic-extra-dark), inset 0px 1px 0px var(--services-shadow);
-}
 
-.services-item:not(.service-item-active):hover,
-.services-item:not(.service-item-active):focus {
-	color: var(--basic-white);
-	background-color: var(--basic-extra-dark);
-}
-
-.service-item-active {
-	color: var(--basic-dark);
-	background-color: var(--basic-white);
-	box-shadow: 0px 1px 0px var(--basic-white);
 }
 
 .services p,
 .company p,
 .contacts p {
-	font-family: var(--font-secondary);
+	font-family: var(--font-secondary);	
 	font-size: 13px;
 	line-height: 24px;
 }
 
 .service-description {
 	display: none;
+	position: absolute;
+	top: -3px;
+	left: 320px;
 	width: 619px;
 	height: 283px;
-	margin-left: 80px;
-	margin-top: 67px;
+	color: 
 }
 
-.service-active {
+.service-input:checked + .service-description {
 	display: block;
+}
+
+.service-input:checked ~ label {
+	color: var(--basic-dark);
+	background-color: var(--basic-white);
+	box-shadow: 0px 1px 0px var(--basic-white);
+}
+
+.service-input:not(:checked):hover ~ label,
+.services-item:not(:checked):focus ~ label {
+	color: var(--basic-white);
+	background-color: var(--basic-extra-dark);
 }
 
 .service-title {
@@ -1149,6 +1159,30 @@ img {
 .service-description p {
 	margin: 0;
 	max-width: 315px;
+	font-weight: 400;
+	color: var(--basic-black);
+}
+
+.service-delivery {
+	background-image: url("../img/delivery-big.png");
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
+
+.service-guarantee {
+	background-image: url("../img/guarantee.png");
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
+
+.service-credit {
+	background-image: url("../img/credit.png");
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
+
+.credit-button {
+	border-radius: 4px;
 }
 
 
