@@ -1527,7 +1527,7 @@ img {
 .filter-option svg {
 	display: none;
 	position: absolute;
-  left: 0px;
+  left: -35px;
   top: 0px;
   width: 27px;
   height: 23px;
@@ -1536,10 +1536,9 @@ img {
   cursor: pointer;
 } 
 
-.filter-input-checkbox ~ label::before {
+.filter-input-checkbox + label::before {
   content: "";
-  display: inline-block;
-  vertical-align: text-bottom;
+  display: block;
   position: absolute;
   left: -35px;
   top: 0;
@@ -1550,13 +1549,12 @@ img {
   border-radius: 3px;
 }
 
-.filter-input-checkbox:checked ~ label::before {
+.filter-input-checkbox:checked + label::before {
   display: none;
 }
 
-.filter-input-checkbox:checked + svg {
-  display: inline-block;
-  vertical-align: text-bottom;
+.filter-input-checkbox:checked + label svg {
+  display: block;
 }
 
 .set-supply {
@@ -1600,17 +1598,25 @@ img {
 	border-color: var(--middle-grey);
 }
 
+.filter-checkbox:hover label svg {
+	fill: var(--middle-grey);
+}
+
 .filter-input-radio:disabled + label,
-.filter-input-checkbox:disabled ~ label {
+.filter-input-checkbox:disabled + label {
 	opacity: 0.4;
 	cursor: default;
 }
 
 .filter-input-radio:disabled + label::before,
 .filter-input-radio:disabled + label::after,
-.filter-input-checkbox:disabled ~ label::before,
-.filter-input-checkbox:disabled + svg {
+.filter-input-checkbox:disabled + label::before {
 	border-color: var(--middle-grey);
+	opacity: 0.3;
+}
+
+.filter-input-checkbox:disabled + label svg {
+	fill: var(--middle-grey);
 	opacity: 0.3;
 }
 
@@ -1948,6 +1954,10 @@ img {
 }
 
 .modal-feedback.modal-show {
+	animation: slideUp 0.6s;
+}
+
+.modal-map.modal-show {
 	animation: appear 0.6s;
 }
 
@@ -2076,6 +2086,10 @@ img {
   z-index: 1;
 }
 
+.modal-map img {
+	display: block;
+}
+
 
 .modal-map .modal-close {
 	top: 10px;
@@ -2182,43 +2196,17 @@ img {
 
 @keyframes appear {
   0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUp {
+  0% {
     transform: translateY(400px);
-  }
-
-  10% {
-    transform: translateY(360px);
-  }
-
-  20% {
-    transform: translateY(320px);
-  }
-
-  30% {
-    transform: translateY(280px);
-  }
-
-  40% {
-    transform: translateY(240px);
-  }
-
-  50% {
-    transform: translateY(200px);
-  }
-
-  60% {
-    transform: translateY(160px);
-  }
-
-  70% {
-    transform: translateY(120px);
-  }
-
-  80% {
-    transform: translateY(80px);
-  }
-
-  90% {
-    transform: translateY(40px);
   }
 
   100% {
