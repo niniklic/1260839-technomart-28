@@ -112,6 +112,15 @@ img {
 	cursor: pointer;
 }
 
+.link-button:hover,
+.link-button:focus {
+	background-color: var(--slider-hover);
+}
+
+.link-button:active {
+	background-color: var(--logo-slider-click);
+}
+
 .title {	
 	margin: 0;
 	font-family: var(--font-primary);
@@ -1938,6 +1947,10 @@ img {
   animation: bounce 0.6s;
 }
 
+.modal-feedback.modal-show {
+	animation: appear 0.6s;
+}
+
 .modal-error {
   animation: shake 0.6s;
 }
@@ -2164,5 +2177,51 @@ img {
   60%,
   80% {
     transform: translateX(10px);
+  }
+}
+
+@keyframes appear {
+  0% {
+    transform: translateY(400px);
+  }
+
+  10% {
+    transform: translateY(360px);
+  }
+
+  20% {
+    transform: translateY(320px);
+  }
+
+  30% {
+    transform: translateY(280px);
+  }
+
+  40% {
+    transform: translateY(240px);
+  }
+
+  50% {
+    transform: translateY(200px);
+  }
+
+  60% {
+    transform: translateY(160px);
+  }
+
+  70% {
+    transform: translateY(120px);
+  }
+
+  80% {
+    transform: translateY(80px);
+  }
+
+  90% {
+    transform: translateY(40px);
+  }
+
+  100% {
+    transform: translateY(0px);
   }
 }
