@@ -806,6 +806,10 @@ img {
 	top: 122px;
 	width: 22px;
 	height: 40px;
+	margin: 0;
+	padding: 0;
+	border: none;
+	background-color: transparent;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	cursor: pointer;
@@ -838,6 +842,7 @@ img {
 	background-image: url("../img/icon-new.svg");
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
+	z-index: 10;
 }
 
 .popular-products,
@@ -1948,6 +1953,7 @@ img {
 	margin: 0;
 	background-color: transparent;
 	cursor: pointer;
+	z-index: 5;
 }
 
 .modal-close::before,
@@ -2044,12 +2050,19 @@ img {
 }
 
 .modal-map iframe {
+  position: relative;
   border: none;
+  z-index: 2;
 }
 
-.modal-map img {
-	display: block;
+.modal-map p {
+  position: absolute;
+  top: 0;
+  left: 0;  
+  margin: 0;
+  z-index: 1;
 }
+
 
 .modal-map .modal-close {
 	top: 10px;
@@ -2129,5 +2142,27 @@ img {
 
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
   }
 }
