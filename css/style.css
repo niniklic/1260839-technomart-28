@@ -929,6 +929,7 @@ img {
 
 .product-image {
   position: relative;
+  box-sizing: border-box;
   order: -1;
   margin: 0;
   height: 184px;
@@ -942,12 +943,12 @@ img {
 
 .product-image img {
   position: absolute;
+  object-fit: contain;
   margin: auto;
   left: 0;
   top: 0;
   bottom: 0;
-  right: 0;
-  object-fit: contain;
+  right: 0;  
 }
 
 .product-item-title {
@@ -1021,7 +1022,9 @@ img {
 .product-buttons .button {
   width: 135px;
   margin: 0 auto;
-  padding: 10px 0px;
+  padding: 0;
+  padding-top: 11px;
+  padding-bottom: 9px;
   font-family: var(--font-primary);
   font-size: 14px;
   line-height: 18px;
@@ -1062,11 +1065,11 @@ img {
 }
 
 .product-buttons .to-bookmarks-button {
+  padding-top: 8px;
+  padding-bottom: 6px;
   color: var(--basic-dark);
   background-color: var(--basic-white);
-  border-style: solid;
-  border-width: 3px;
-  border-color: var(--order);
+  border: 3px solid var(--order);
   border-radius: 2px;
 }
 
@@ -1458,7 +1461,7 @@ img {
 
 .range-controls .toggle {
   position: absolute;
-  top: 31px;
+  top: 30px;
   left: 0;
   width: 4px;
   height: 4px;
@@ -1490,8 +1493,9 @@ img {
 }
 
 .price-controls input {
-  width: 75px;
-  padding: 10px;
+  width: 81px;
+  padding: 10px 0;
+  padding-left: 14px;
   font-size: 17px;
   line-height: 18px;
   text-align: center;
@@ -1534,7 +1538,7 @@ img {
 .filter-option label {
   position: relative;
   display: block;
-  padding-top: 3px;
+  padding-top: 2px;
   font-size: 15px;
   line-height: 19px;
   cursor: pointer;
@@ -1650,7 +1654,9 @@ img {
 .filter-button {
   width: 100%;
   min-height: 38px;
-  margin-top: 28px;
+  margin-top: 8px;
+  border: 1px solid var(--basic-greylight);
+  background-color: var(--basic-white);
 }
 
 .sorting {
