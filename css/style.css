@@ -897,7 +897,10 @@ img {
 
 .popular-button {
   display: block;
-  width: 192px;
+  width: 192px;  
+}
+
+.popular-products-button {
   margin-right: 14px;
 }
 
@@ -932,9 +935,8 @@ img {
   box-sizing: border-box;
   order: -1;
   margin: 0;
-  height: 184px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  height: 177px;
+  padding-top: 5px 0;
 }
 
 .product-item.new .product-image {
@@ -1088,6 +1090,10 @@ img {
   margin-top: 70px;
 }
 
+.popular-manufacturers-button {
+  margin-right: 19px;
+}
+
 .manufacturers-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1096,16 +1102,17 @@ img {
 
 .manufacturers-item {
   width: 218px;
-  height: 145px;
+  height: 143px;
+  border: 1px solid var(--product-border);
 }
 
 .manufacturers-item a {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
   width: 100%;
-  height: 100%; 
-  border: 1px solid var(--product-border);
+  height: 100%;  
 }
 
 .manufacturers-item a:hover,
@@ -1117,6 +1124,47 @@ img {
   opacity: 0.5;
   box-shadow: 0px 4px 20px var(--black-a15);
 }
+.manufacturers-item img {
+  display: block;
+}
+
+.makita-logo {
+  padding-top: 50px;
+  padding-bottom: 55px;
+}
+
+.dewalt-logo {
+  padding-top: 48px;
+  padding-bottom: 53px;
+}
+
+.interskol-logo {
+  padding-top: 34px;
+  padding-bottom: 35px;
+  padding-left: 9px;
+  padding-right: 11px;
+}
+
+.hitachi-logo {
+  padding-top: 58px;
+  padding-bottom: 56px;
+  padding-left: 28px;
+  padding-right: 23px;
+}
+
+.lg-logo {
+  padding-top: 35px;
+  padding-bottom: 37px;
+  padding-left: 48px;
+  padding-right: 51px;
+}
+
+.afg-logo {
+  padding-top: 23px;
+  padding-bottom: 24px;
+  padding-left: 35px;
+  padding-right: 34px;
+}
 
 /* services */
 .services { 
@@ -1127,18 +1175,20 @@ img {
 }
 
 .services p {
+  margin: 0;
+  margin-top: 25px;
   max-width: 400px;
 }
 
 .services-box {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap;  
 }
 
 .services-list {
   position: relative;
   margin-top: 70px;
-  cursor: pointer;
+  cursor: pointer;  
 }
 
 .services-list label {
@@ -1160,15 +1210,15 @@ img {
   box-sizing: border-box;
   width: 240px;
   height: 61px;
+  margin-bottom: 1px;
   padding-left: 22px;
-  padding-top: 13.5px;
+  padding-top: 14px;
   font-size: 21px;
   line-height: 30px;
   font-weight: 700;
   color: var(--basic-white);
   background-color: var(--basic-dark);
   box-shadow: 0px 1px 0px var(--basic-extra-dark), inset 0px 1px 0px var(--services-shadow);
-
 }
 
 .services p,
@@ -1177,6 +1227,7 @@ img {
   font-family: var(--font-secondary);
   font-size: 13px;
   line-height: 24px;
+  margin-bottom: 1px;
 }
 
 .service-description {
@@ -1185,7 +1236,7 @@ img {
   top: -3px;
   left: 320px;
   width: 619px;
-  height: 283px;
+  min-height: 283px;
 }
 
 .service-input:checked + .service-description {
@@ -1223,19 +1274,29 @@ img {
 }
 
 .service-guarantee {
+  min-height: 284px;
   background-image: url("../img/guarantee.png");
   background-repeat: no-repeat;
-  background-position: right bottom;
+  background-position: right -8px bottom 2px;
+}
+
+.service-guarantee .service-title {
+  margin-bottom: 25px;
+}
+
+.service-guarantee p {
+  max-width: 331px;
 }
 
 .service-credit {
+  min-height: 285px;
   background-image: url("../img/credit.png");
   background-repeat: no-repeat;
-  background-position: right bottom;
+  background-position: right -10px bottom;
 }
 
 .credit-button {
-  margin-top: 31px;
+  margin-top: 28px;
   border-radius: 4px;
 }
 

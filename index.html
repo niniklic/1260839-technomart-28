@@ -155,7 +155,7 @@
         <section class="popular-products">
           <div class="popular-products-head">
             <h2 class="title popular-title">Популярные товары:</h2>
-            <a class="link-button popular-button" href="">Все популярные товары</a>
+            <a class="link-button popular-button popular-products-button" href="">Все популярные товары</a>
           </div>
           
           <ul class="product-list product-list-popular">
@@ -216,33 +216,33 @@
         <section class="popular-manufacturers">
           <div class="popular-manufacturers-head">
             <h2 class="title popular-title">Популярные производители:</h2>
-            <a class="link-button popular-button" href="">Все производители</a>
+            <a class="link-button popular-button popular-manufacturers-button" href="">Все производители</a>
           </div>
 
           <ul class="manufacturers-list">
             <li class="manufacturers-item">
-              <a href=""><img src="img/bosch.png" width="126" height="37" alt="Bosch"></a>
+              <a href="" class="bosch-logo"><img src="img/bosch.png" width="126" height="37" alt="Bosch"></a>
             </li>
             <li class="manufacturers-item">
-              <a href=""><img src="img/makita.png" width="123" height="40" alt="Makita"></a>
+              <a href="" class="makita-logo"><img src="img/makita.png" width="123" height="40" alt="Makita"></a>
             </li>
             <li class="manufacturers-item">
-              <a href=""><img src="img/dewalt.png" width="146" height="44" alt="Dewalt"></a>
+              <a href="" class="dewalt-logo"><img src="img/dewalt.png" width="146" height="44" alt="Dewalt"></a>
             </li>
             <li class="manufacturers-item">
-              <a href=""><img src="img/interskol.png" width="200" height="88" alt="Интерскол"></a>
+              <a href="" class="interskol-logo"><img src="img/interskol.png" width="200" height="76" alt="Интерскол"></a>
             </li>
             <li class="manufacturers-item">
-              <a href=""><img src="img/hitachi.png" width="169" height="31" alt="Hitachi"></a>
+              <a href="" class="hitachi-logo"><img src="img/hitachi.png" width="169" height="31" alt="Hitachi"></a>
             </li>
             <li class="manufacturers-item">
-              <a href=""><img src="img/lg.png" width="121" height="73" alt="LG"></a>
+              <a href="" class="lg-logo"><img src="img/lg.png" width="121" height="73" alt="LG"></a>
             </li>
             <li class="manufacturers-item">
-              <a href=""><img src="img/aeg.png" width="151" height="96" alt="AEG"></a>
+              <a href="" class="afg-logo"><img src="img/aeg.png" width="151" height="96" alt="AEG"></a>
             </li>
             <li class="manufacturers-item">
-              <a href=""><img src="img/metabo.png" width="204" height="69" alt="Metabo"></a>
+              <a href="" class="metabo-logo"><img src="img/metabo.png" width="204" height="69" alt="Metabo"></a>
             </li>
           </ul>
         </section>
@@ -256,7 +256,7 @@
             <ul class="services-list">
               <li>
                 <input class="visually-hidden service-input" type="radio" name="services" value="delivery" id="service-delivery" checked>
-                <div class="service-description service-delivery ">
+                <div class="service-description service-delivery  service-active">
                   <h4 class="title service-title">Доставка</h4>
                   <p>Мы с удовольствием доставим ваш товар прямо</p>
                   <p>к вашему подъезду совершенно бесплатно!</p>
@@ -269,15 +269,18 @@
                 <input class="visually-hidden service-input" type="radio" name="services" value="guarantee" id="service-guarantee">
                 <div class="service-description service-guarantee">
                   <h4 class="title service-title">Гарантия</h4>
-                  <p>Если купленный у нас товар сломается или заискрит, а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
+                  <p>Если купленный у нас товар поломается или заискрит,</p>
+                  <p>а также в случае пожара, спровоцированного его возгоранием, &nbsp;вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.</p>
+                  <p>Дом уж восстановите как-нибудь сами.</p>
                 </div>
                 <label class="services-item" for="service-guarantee">Гарантия</label>
               </li>
               <li>
-                <input class="visually-hidden service-input" type="radio" name="services" value="credit" id="service-credit" checked>
-                <div class="service-description service-credit  service-active">
+                <input class="visually-hidden service-input" type="radio" name="services" value="credit" id="service-credit">
+                <div class="service-description service-credit">
                   <h4 class="title service-title">Кредит</h4>
-                  <p>Залезть в долговую яму стало ещё проще! Кредитные консультанты придут вам на помощь.</p>
+                  <p>Залезть в долговую яму стало ещё проще!</p>
+                  <p>Кредитные консультанты придут вам на помощь.</p>
                   <a class="link-button credit-button popular-button" href="">Отправить заявку</a>
                 </div>
                 <label class="services-item" for="service-credit">Кредит</label>
