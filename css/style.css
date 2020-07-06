@@ -202,8 +202,8 @@ img {
 .search-text {
   width: 228px;
   margin: 0;
-  padding-top: 9px;
-  padding-bottom: 9px;
+  padding-top: 10px;
+  padding-bottom: 8px;
   padding-left: 43px;
   font-size: 18px;
   line-height: 24px;
@@ -262,8 +262,8 @@ img {
   box-sizing: border-box;
   width: 150px;
   margin: 0;
-  padding-top: 9px;
-  padding-bottom: 9px;
+  padding-top: 10px;
+  padding-bottom: 8px;
 }
 
 .header-bookmarks {
@@ -321,7 +321,7 @@ img {
 }
 
 .header-order {
-  text-align: center;
+  padding-left: 19px;
   background-color: var(--order);
 }
 
@@ -338,24 +338,24 @@ img {
 .header-content {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 
 .header-description {
   width: 197px;
   min-height: 71px;
   margin: 0;
-  margin-top: 38px;
+  margin-top: 43px;
   margin-left: 30px;
-  margin-right: 93px;
+  margin-right: 91px;
   font-size: 16px;
-  line-height: 23px;
+  line-height: 24px;
   font-style: italic;
   color: var(--basic-red);
 }
 
 .header-contacts {
-  margin-top: 41px;
+  margin-top: 46px;
   font-size: 14px;
   text-align: center;
 }
@@ -379,7 +379,7 @@ img {
   width: 270px;
   padding-top: 4px;
   padding-bottom: 5px;
-  padding-left: 71px;
+  padding-left: 70px;
   padding-right: 42px;
   font-size: 21px;
   line-height: 30px;
@@ -395,8 +395,8 @@ img {
 }
 
 .header-account {
-  margin-top: 41px;
-  margin-left: 69px;
+  margin-top: 46px;
+  margin-left: 67px;
 }
 
 .header-account,
@@ -433,7 +433,7 @@ img {
 
 .account-button.button-login {
   position: relative;
-  margin-right: 5px;
+  margin-right: 10px;
   padding-left: 45px;
   padding-right: 27px;
 }
