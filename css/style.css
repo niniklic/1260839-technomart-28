@@ -1723,11 +1723,13 @@ img {
   fill: var(--middle-grey);
 }
 
-.filter-input:active + label::before {
+.filter-input:active + label::before,
+.filter-input:focus + label::before {
   outline: 1px solid var(--basic-grey);
 }
 
-.filter-input-checkbox:active + label svg {
+.filter-input-checkbox:active + label svg,
+.filter-input-checkbox:focus + label svg {
   outline: 1px solid var(--basic-grey);
 }
 
