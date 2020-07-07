@@ -1723,13 +1723,12 @@ img {
   fill: var(--middle-grey);
 }
 
-.filter-option:active label::before,
-.filter-option:active label::after {
-  border-color: var(--basic-grey);
+.filter-input:active + label::before {
+  outline: 1px solid var(--basic-grey);
 }
 
-.filter-checkbox:active label svg {
-  fill: var(--basic-grey);
+.filter-input-checkbox:active + label svg {
+  outline: 1px solid var(--basic-grey);
 }
 
 .filter-input-radio:disabled + label,
@@ -2323,7 +2322,7 @@ img {
 @keyframes shake {
   0%,
   100% {
-    transform: translateX(0);
+    transform: translate(0, -50%);
   }
 
   10%,
@@ -2331,14 +2330,14 @@ img {
   50%,
   70%,
   90% {
-    transform: translateX(-10px);
+    transform: translate(-10px, -50%);
   }
 
   20%,
   40%,
   60%,
   80% {
-    transform: translateX(10px);
+    transform: translate(10px, -50%);
   }
 }
 
