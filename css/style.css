@@ -854,7 +854,6 @@ img {
   background-image: url("../img/icon-right.svg");
 }
 
-
 .new::after {
   position: absolute;
   content: "";
@@ -908,7 +907,7 @@ img {
 .product-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  grid-gap: 18px;
 }
 
 .product-list-popular {
@@ -1188,6 +1187,7 @@ img {
 .services-list {
   position: relative;
   margin-top: 70px;
+  background-color: var(--basic-dark);
   cursor: pointer;  
 }
 
@@ -1824,6 +1824,8 @@ img {
 }
 
 .pagination-item {
+  box-sizing: border-box;
+  width: 38px;
   margin-right: 10px;
   font-size: 13px;
   line-height: 18px;
@@ -1838,7 +1840,7 @@ img {
 
 .pagination-item a {
   display: block;
-  padding: 10px 15px;
+  padding: 9px 2px;
   color: var(--basic-black);
   text-align: center; 
 }
@@ -1852,8 +1854,8 @@ img {
   color: var(--basic-white);
 }
 
-.pagination-item:last-child a {
-  width: 110px;
+.pagination-item:last-child {
+  width: 140px;
 }
 
 .pagination-item:not(.pagination-item-current):hover,
@@ -1870,7 +1872,7 @@ img {
   grid-column: 1 / -1;
   font-family: var(--font-primary);
   padding-top: 64px;
-  padding-bottom: 68px;
+  padding-bottom: 70px;
   font-size: 14px;
   line-height: 18px;
   background-color: var(--basic-light);
@@ -1922,6 +1924,7 @@ img {
 .footer-contacts p {
   width: 323px;
   margin: 0;
+  margin-left: 3px;
 }
 
 .footer-menu ul {
@@ -1931,13 +1934,13 @@ img {
 }
 
 .footer-navigation {
-  width: 450px;
+  width: 547px;
   margin-top: 37px;
   margin-bottom: 34px;
 }
 
 .footer-categories {
-  padding-left: 20px;
+  padding-left: 22px;
 }
 
 .footer-categories a,
@@ -1969,33 +1972,42 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
   min-height: 71px;
-  padding-top: 36px;
+  padding-top: 35px;
   font-size: 16px;
   line-height: 18px;
 }
 
 .footer-copyright {
-  margin-right: 50px;
+  margin-left: 1px;
 }
 
 .footer-copyright p {
   margin: 0;
-  width: 227px;
+  width: 280px;
 }
 
 .social-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 220px;
+  padding-left: 10px;
+  margin-bottom: 22px;
+}
+
+.social-list li {
+  margin-right: 1px;
+}
+
+.social-list li:last-child {
+  margin-right: 0;
 }
 
 .social-item {
   display:flex;
   justify-content: center;
   align-items: center;
-  width: 44px;
-  height: 44px;
+  width: 43px;
+  height: 43px;
   background-color: var(--social-background);
   border-radius: 50%;
 }
