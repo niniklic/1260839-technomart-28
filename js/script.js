@@ -94,9 +94,9 @@ if (cartPopup) {
 
   for (let cartLink of cartLinkList) {
     cartLink.addEventListener('click', (event) => {
-    	event.preventDefault();
-    	cartPopup.classList.add("modal-show"); 
-    })  
+      event.preventDefault();
+      cartPopup.classList.add("modal-show"); 
+    })
   }
 
   cartClose.addEventListener("click", function (evt) {
