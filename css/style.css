@@ -907,7 +907,8 @@ img {
 .product-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 18px;
+  grid-column-gap: 20px;
+  grid-row-gap: 18px;
 }
 
 .product-list-popular {
@@ -920,10 +921,12 @@ img {
   flex-direction: column;
   justify-content: flex-start;
   box-sizing: border-box;
-  padding: 0px 17px;
-  padding-bottom: 97px;
   width: 220px;
   min-height: 318px;
+  padding-top: 0px;
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-bottom: 96px;
   font-family: var(--font-secondary);
   text-align: center;
   border: 1px solid var(--product-border);
@@ -934,22 +937,38 @@ img {
   box-sizing: border-box;
   order: -1;
   margin: 0;
-  height: 177px;
-  padding-top: 5px 0;
-}
-
-.product-item.new .product-image {
-  margin-right: 10px;
+  height: 178px;
+  padding-right: 25px;
+  padding-left: 15px;
+  padding-top: 21px;
 }
 
 .product-image img {
-  position: absolute;
-  object-fit: contain;
-  margin: auto;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;  
+  display: block;
+  object-fit: contain; 
+  width: 144px;
+  height: 128px; 
+}
+
+.product-big-img.product-image {
+  padding: 5px 0; 
+  padding-bottom: 0;
+}
+
+.product-big-img img {
+  width: 184px;
+  height: 164px;
+}
+
+.product-item.new .product-image {
+  padding-right: 35px;
+  padding-left: 22px;
+  padding-top: 29px;
+}
+
+.product-item.new img {
+  width: 127px;
+  height: 112px;  
 }
 
 .product-item-title {
@@ -961,6 +980,7 @@ img {
   text-transform: none;
   text-align: center;
 }
+
 
 .product-item-oldprice {
   position: absolute;
@@ -979,7 +999,7 @@ img {
 .product-item-price {
   position: absolute;
   box-sizing: border-box;
-  right: 32px;
+  left: 45px;
   bottom: 20px;
   width: 141px;
   margin: 0;
@@ -1005,7 +1025,6 @@ img {
   opacity: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   position: absolute;
   top: 0;
   left: 0;  
@@ -1024,8 +1043,8 @@ img {
   width: 135px;
   margin: 0 auto;
   padding: 0;
-  padding-top: 11px;
-  padding-bottom: 9px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   font-family: var(--font-primary);
   font-size: 14px;
   line-height: 18px;
@@ -1034,8 +1053,9 @@ img {
 
 .product-buttons .buy-button {
   position: relative;
+  margin-top: 38px;
   margin-bottom: 10px;
-  padding-left: 18px;
+  padding-left: 17px;
   color: var(--basic-white);
   background-color: var(--order);
   border: none;
@@ -1269,6 +1289,10 @@ img {
   background-image: url("../img/delivery-big.png");
   background-repeat: no-repeat;
   background-position: right bottom;
+}
+
+.service-delivery p:nth-child(3) {
+  margin-top: 1px;
 }
 
 .service-guarantee {
